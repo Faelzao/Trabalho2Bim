@@ -1,11 +1,12 @@
-import { Image, StyleSheet, Platform, View } from 'react-native';
+import { Image, StyleSheet,  View } from 'react-native';
+import React from 'react'
 
-
+import Home from '../../components/home'
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-
+      <Home/>
 
     </View>
   );
@@ -13,19 +14,7 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+   flex: 1,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+  
 });
