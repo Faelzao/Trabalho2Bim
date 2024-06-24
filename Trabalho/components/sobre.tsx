@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native'
+import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native'
 import Home from './home';
 
 export default function App() {
@@ -10,7 +10,17 @@ export default function App() {
 
             return (
                 <View style={styles.container}>
-                    <Text style={styles.title}> Página Sobre </Text>
+                    <Text style={styles.title}> Localização
+                    atual </Text>
+
+                    <Image  style={styles.img} source={ require("../assets/images/latitude.png")}/>
+                    <Text style={styles.title}> 0.0
+                     </Text>
+
+                    <Image  style={styles.img2} source={ require("../assets/images/longitude.png")}/>
+                    <Text style={styles.title}> 0.0
+                    </Text>
+
                     <TouchableOpacity style={styles.button} onPress={() => setPage('home')}>
                         <Text style={styles.buttonText}>Clique aqui  </Text>
                     </TouchableOpacity>
@@ -29,15 +39,15 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        justifyContent: 'center',
+        
         alignItems: 'center',
-        backgroundColor: '#fff',
+        
     },
 
     title: {
         fontSize: 24,
         fontWeight: 'bold',
-        color: '#000',
+        color: '#fff',
         marginBottom: 20,
     },
 
@@ -51,6 +61,15 @@ const styles = StyleSheet.create({
     color: '#FFFFFF', 
     fontSize: 16,
 },
-
+img: {
+    height: 100, 
+    width: 250,
+   
+},
+img2: {
+    height: 80, 
+    width: 250,
+   
+},
 
 })
